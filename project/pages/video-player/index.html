@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSExpert Max - BlinkToPlay</title>
+  <style>
+    #video {
+      width: 95%;
+      margin: 10px;
+    }
+
+    button {
+      margin: 10px;
+    }
+
+    .buttoncontainer{
+      margin-left: 20px;
+    }
+
+    .webcam{
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="buttoncontainer">
+    <div>
+      <button type="button" id="init" disabled>Initialize Blink Recognition</button>
+      <output id="status"></output>
+    </div>
+  </div>
+  <video id="video" src="/assets/video.mp4" controls></video>
+  <script src="./src/index.js" type="module"></script>
+</body>
+
+</html>
