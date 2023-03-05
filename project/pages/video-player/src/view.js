@@ -19,12 +19,12 @@ export default class View{
 
     getVideoFrame(video){
         const canvas = this.#videoFrameCanvas;
-        const [width, height] = [video.width, video.height];
-        canvas.width = Number(width);
-        canvas.height =  Number(height);
+        const [width, height] = [video.videoWidth, video.videoHeight];
+        canvas.width = width;
+        canvas.height =  height;
 
-        this.#canvasContext.drawImage(video, 0, 0, Number(width), Number(height));
-        return this.#canvasContext.getImageData(0, 0, Number(width), Number(height));
+        this.#canvasContext.drawImage(video, 0, 0,width, height);
+        return this.#canvasContext.getImageData(0, 0,width, height);
     }
 
     enableButton (){

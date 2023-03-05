@@ -11,8 +11,8 @@ export default class Camera {
         const videoConfig = {
             audio: false,
             video: {
-                width: 320,
-                height: 240
+                width: globalThis.screen.availWidth,
+                height: globalThis.screen.availHeight
             },
             frameRate:{
                 ideal: 60
